@@ -42,6 +42,31 @@ In this notebook file, dataset was statistically analyzed and checked manually.
 The images with the highest and lowest FaceBoxConfidence values were read with the _**opencv**_ library and examined manually.
 The balance of some samples in the dataset was examined by drawing charts.
 See <ins>_/DataPreparation/Preparation1.ipynb_</ins> file for details.
+2. **Preparation2:** Second Data Preparation Process.
+In this notebook file Data with FaceBoxConfidence value above 70 was selected as a sample.
+The images in the sample was read with the _**opencv**_ library and the related faces were resized as (224, 224).
+The reason why images were resized this way will be explained in the Training section.
+Sample was splitted into Training, Validation and Test data.
+Sample images were drawn from Training Validation and Test data.
+Reorganized data was saved as pkl files with the name Sample1 for future use.
+See <ins>_/DataPreparation/Preparation2.ipynb_</ins> file for details.
+3. **Preparation3:** Third Data Preparation Process.
+In this notebook file a perfectly balanced sample was selected.
+The images in the sample was read with the _**opencv**_ library and the related faces were resized as (224, 224).
+The reason why images were resized this way will be explained in the Training section.
+Sample was splitted into Training, Validation and Test data.
+Sample images were drawn from Training Validation and Test data.
+Reorganized data was saved as pkl files with the name Sample2 for future use.
+See <ins>_/DataPreparation/Preparation3.ipynb_</ins> file for details.
+4. **Preparation4:** Fourth Data Preparation Process.
+In this notebook file a sample that can be considered balanced at a certain level was selected.
+The images in the sample was read with the _**opencv**_ library and the related faces were resized as (224, 224).
+The reason why images were resized this way will be explained in the Training section.
+Sample was splitted into Training, Validation and Test data.
+Sample images were drawn from Training Validation and Test data.
+Reorganized data was saved as pkl files with the name Sample3 for future use.
+See <ins>_/DataPreparation/Preparation4.ipynb_</ins> file for details.
+
 
 ---
 
