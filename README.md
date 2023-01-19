@@ -6,8 +6,9 @@
 [**Computer Vision and Deep Learning Based Virtual Teacher**](https://github.com/RsgAI/Computer-Vision-and-Deep-Learning-Based-Virtual-Teacher "GitHub Repository") project.
 In this project, deep learning-based facial expression recognition will be implemented on the
 [**Expression in-the-Wild(ExpW)**](http://mmlab.ie.cuhk.edu.hk/projects/socialrelation/index.html "Official Website") dataset.
-Comparisons will be made between models and datasets by training different models with different quality and quantity parts of the relevant dataset.*
+Comparisons will be made between models and samples by training different models with different quality and quantity samples of the relevant dataset.*
 
+### Note: Work on this project is being continued
 ---
 
 ### *Dataset*
@@ -69,6 +70,48 @@ See <ins>_/DataPreparation/Preparation4.ipynb_</ins> file for details.
 
 
 ---
+
+## *Training*
+
+*In this section, different models will be trained with the prepared samples and the results will be shown.
+The models to be trained will be based on the architectures of the [**VGG16**](https://keras.io/api/applications/vgg/ "keras") and [**MobileNet**](https://keras.io/api/applications/mobilenet/#mobilenet-function "keras") pre-trained models.
+See also [**MobileNet (GitHub)**](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md "github") and [**Depthwise Separable Convolutions**](https://towardsdatascience.com/understanding-depthwise-separable-convolutions-and-the-efficiency-of-mobilenets-6de3d6b62503 "towardsdatascience").
+See also [**VGG16 (TensorFlow)**](https://www.tensorflow.org/api_docs/python/tf/keras/applications/vgg16/VGG16 "tensorflow")*
+
+*Many pre-trained models, including the ones to be used within the scope of this project, have been trained with (224, 224, 3) sized images containing pixel values in the [-1, 1] range.
+This is why the images were resized as (224, 224, 3) in the Preparation section.
+Also, for this reason, the pixel values will be converted to the range [-1, 1].
+In this way, the data will be symmetrical and the performance of the [**Backpropagation**](https://en.wikipedia.org/wiki/Backpropagation "wikipedia") algorithm used during training will be increased.
+See also [**This Question and Answer**](https://stackoverflow.com/questions/59540276/why-in-preprocessing-image-data-we-need-to-do-zero-centered-data "stackoverflow").
+Therefore, training will be performed by converting pixel values to this range with the simplest method (pixel / 127.5 - 1).*
+
+*The same trainings will be carried out by applying [**Data Augmentation**](https://en.wikipedia.org/wiki/Data_augmentation "wikipedia") to the data in order to observe the difference.
+For details of the Data Augmentation process used in this application, see also [**Image Data Augmentation**](https://www.tensorflow.org/tutorials/images/data_augmentation "tensorflow").*
+
+### - Sample1
+1. **Training1:** First model training process. 
+In this notebook file, a model based on VGG16 architecture were trained with the Sample1 sample.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample1/Training01.ipynb_</ins> file for details.
+2. **Training2:** Second model training process. 
+In this notebook file, a model based on MobileNetV2 architecture were trained with the Sample1 sample.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample1/Training02.ipynb_</ins> file for details.
+3. **Training3:** Third model training process. 
+In this notebook file, Data Augmentation operation were applied on Sample1 sample, a model based on VGG16 architecture were trained with this augmented data.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample1/Training03.ipynb_</ins> file for details.
+4. **Training4:** Fourth model training process. 
+In this notebook file, Data Augmentation operation were applied on Sample1 sample, a model based on MobileNetV2 architecture were trained with this augmented data.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample1/Training04.ipynb_</ins> file for details.
+
+---
+
 
 - _**Note:** All data files are deleted with their folders to save memory.
 If notebook files are wanted to be run, images must be moved to <ins>/Data/RawData/Images/</ins> path and label.lst must be moved to <ins>/Data/RawData/Label/</ins> path in
