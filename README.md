@@ -8,7 +8,6 @@ In this project, deep learning-based facial expression recognition will be imple
 [**Expression in-the-Wild(ExpW)**](http://mmlab.ie.cuhk.edu.hk/projects/socialrelation/index.html "Official Website") dataset.
 Comparisons will be made between models and samples by training different models with different quality and quantity samples of the relevant dataset.*
 
-### Note: Work on this project is being continued
 ---
 
 ### *Dataset*
@@ -52,7 +51,7 @@ Sample images were drawn from Training Validation and Test data.
 Reorganized data was saved as pkl files with the name Sample1 for future use.
 See <ins>_/DataPreparation/Preparation2.ipynb_</ins> file for details.
 3. **Preparation3:** Third Data Preparation Process.
-In this notebook file a perfectly balanced sample was selected.
+In this notebook file a perfectly balanced sample in terms of quantity was selected.
 The images in the sample was read with the _**opencv**_ library and the related faces were resized as (224, 224).
 The reason why images were resized this way will be explained in the Training section.
 Sample was splitted into Training, Validation and Test data.
@@ -60,13 +59,21 @@ Sample images were drawn from Training Validation and Test data.
 Reorganized data was saved as pkl files with the name Sample2 for future use.
 See <ins>_/DataPreparation/Preparation3.ipynb_</ins> file for details.
 4. **Preparation4:** Fourth Data Preparation Process.
-In this notebook file a sample that can be considered balanced at a certain level was selected.
+In this notebook file a perfectly balanced sample in terms of both quality and quantity was selected.
 The images in the sample was read with the _**opencv**_ library and the related faces were resized as (224, 224).
 The reason why images were resized this way will be explained in the Training section.
 Sample was splitted into Training, Validation and Test data.
 Sample images were drawn from Training Validation and Test data.
 Reorganized data was saved as pkl files with the name Sample3 for future use.
 See <ins>_/DataPreparation/Preparation4.ipynb_</ins> file for details.
+5. **Preparation5:** Fourth Data Preparation Process.
+In this notebook file a perfectly balanced sample in terms of both quality and quantity, consisting of only the facial expressions to be used within the scope of the Project, was selected.
+The images in the sample was read with the _**opencv**_ library and the related faces were resized as (224, 224).
+The reason why images were resized this way will be explained in the Training section.
+Sample was splitted into Training, Validation and Test data.
+Sample images were drawn from Training Validation and Test data.
+Reorganized data was saved as pkl files with the name Sample4 for future use.
+See <ins>_/DataPreparation/Preparation5.ipynb_</ins> file for details.
 
 
 ---
@@ -149,6 +156,192 @@ In this notebook file, Data Augmentation operation were applied on Sample1 sampl
 Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
 Based on the Test data, prediction distribution charts were drawn for each label.
 See <ins>_/Training/Sample1/Training12.ipynb_</ins> file for details.
+
+### - Sample2
+1. **Training1:** First model training process. 
+In this notebook file, a model based on VGG16 architecture were trained with the Sample2 sample.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample2/Training01.ipynb_</ins> file for details.
+2. **Training2:** Second model training process. 
+In this notebook file, a model based on MobileNetV2 architecture were trained with the Sample2 sample.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample2/Training02.ipynb_</ins> file for details.
+3. **Training3:** Third model training process. 
+In this notebook file, Data Augmentation operation were applied on Sample2 sample, a model based on VGG16 architecture were trained with this augmented data.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample2/Training03.ipynb_</ins> file for details.
+4. **Training4:** Fourth model training process. 
+In this notebook file, Data Augmentation operation were applied on Sample2 sample, a model based on MobileNetV2 architecture were trained with this augmented data.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample2/Training04.ipynb_</ins> file for details.
+5. **Training5:** Fifth model training process. 
+In this notebook file, pre-trained VGG16 model were trained based on Transfer Learning method with the Sample2 sample.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample2/Training05.ipynb_</ins> file for details.
+6. **Training6:** Sixth model training process. 
+In this notebook file, pre-trained MobileNetV2 model were trained based on Transfer Learning method with the Sample2 sample.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample2/Training06.ipynb_</ins> file for details.
+7. **Training7:** Seventh model training process. 
+In this notebook file, Data Augmentation operation were applied on Sample2 sample, pre-trained VGG16 model were trained based on Transfer Learning method with this augmented data.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample2/Training07.ipynb_</ins> file for details.
+8. **Training8:** Eighth model training process. 
+In this notebook file, Data Augmentation operation were applied on Sample2 sample, pre-trained MobileNetV2 model were trained based on Transfer Learning method with this augmented data.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample2/Training08.ipynb_</ins> file for details.
+9. **Training9:** Fifth model training process. 
+In this notebook file, pre-trained VGG16 model were trained based on Transfer Learning and Fine-Tuning methods with the Sample2 sample.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample2/Training09.ipynb_</ins> file for details.
+10. **Training10:** Sixth model training process. 
+In this notebook file, pre-trained MobileNetV2 model were trained based on Transfer Learning and Fine-Tuning methods with the Sample2 sample.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample2/Training10.ipynb_</ins> file for details.
+11. **Training11:** Seventh model training process. 
+In this notebook file, Data Augmentation operation were applied on Sample2 sample, pre-trained VGG16 model were trained based on Transfer Learning and Fine-Tuning methods with this augmented data.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample2/Training11.ipynb_</ins> file for details.
+12. **Training12:** Eighth model training process. 
+In this notebook file, Data Augmentation operation were applied on Sample2 sample, pre-trained MobileNetV2 model were trained based on Transfer Learning and Fine-Tuning methods with this augmented data.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample2/Training12.ipynb_</ins> file for details.
+
+### - Sample3
+1. **Training1:** First model training process. 
+In this notebook file, a model based on VGG16 architecture were trained with the Sample3 sample.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample3/Training01.ipynb_</ins> file for details.
+2. **Training2:** Second model training process. 
+In this notebook file, a model based on MobileNetV2 architecture were trained with the Sample3 sample.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample3/Training02.ipynb_</ins> file for details.
+3. **Training3:** Third model training process. 
+In this notebook file, Data Augmentation operation were applied on Sample3 sample, a model based on VGG16 architecture were trained with this augmented data.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample3/Training03.ipynb_</ins> file for details.
+4. **Training4:** Fourth model training process. 
+In this notebook file, Data Augmentation operation were applied on Sample3 sample, a model based on MobileNetV2 architecture were trained with this augmented data.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample3/Training04.ipynb_</ins> file for details.
+5. **Training5:** Fifth model training process. 
+In this notebook file, pre-trained VGG16 model were trained based on Transfer Learning method with the Sample3 sample.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample3/Training05.ipynb_</ins> file for details.
+6. **Training6:** Sixth model training process. 
+In this notebook file, pre-trained MobileNetV2 model were trained based on Transfer Learning method with the Sample3 sample.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample3/Training06.ipynb_</ins> file for details.
+7. **Training7:** Seventh model training process. 
+In this notebook file, Data Augmentation operation were applied on Sample3 sample, pre-trained VGG16 model were trained based on Transfer Learning method with this augmented data.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample3/Training07.ipynb_</ins> file for details.
+8. **Training8:** Eighth model training process. 
+In this notebook file, Data Augmentation operation were applied on Sample3 sample, pre-trained MobileNetV2 model were trained based on Transfer Learning method with this augmented data.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample3/Training08.ipynb_</ins> file for details.
+9. **Training9:** Fifth model training process. 
+In this notebook file, pre-trained VGG16 model were trained based on Transfer Learning and Fine-Tuning methods with the Sample3 sample.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample3/Training09.ipynb_</ins> file for details.
+10. **Training10:** Sixth model training process. 
+In this notebook file, pre-trained MobileNetV2 model were trained based on Transfer Learning and Fine-Tuning methods with the Sample3 sample.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample3/Training10.ipynb_</ins> file for details.
+11. **Training11:** Seventh model training process. 
+In this notebook file, Data Augmentation operation were applied on Sample3 sample, pre-trained VGG16 model were trained based on Transfer Learning and Fine-Tuning methods with this augmented data.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample3/Training11.ipynb_</ins> file for details.
+12. **Training12:** Eighth model training process. 
+In this notebook file, Data Augmentation operation were applied on Sample3 sample, pre-trained MobileNetV2 model were trained based on Transfer Learning and Fine-Tuning methods with this augmented data.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample3/Training12.ipynb_</ins> file for details.
+
+### - Sample4
+1. **Training1:** First model training process. 
+In this notebook file, a model based on VGG16 architecture were trained with the Sample4 sample.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample4/Training01.ipynb_</ins> file for details.
+2. **Training2:** Second model training process. 
+In this notebook file, a model based on MobileNetV2 architecture were trained with the Sample4 sample.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample4/Training02.ipynb_</ins> file for details.
+3. **Training3:** Third model training process. 
+In this notebook file, Data Augmentation operation were applied on Sample4 sample, a model based on VGG16 architecture were trained with this augmented data.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample4/Training03.ipynb_</ins> file for details.
+4. **Training4:** Fourth model training process. 
+In this notebook file, Data Augmentation operation were applied on Sample4 sample, a model based on MobileNetV2 architecture were trained with this augmented data.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample4/Training04.ipynb_</ins> file for details.
+5. **Training5:** Fifth model training process. 
+In this notebook file, pre-trained VGG16 model were trained based on Transfer Learning method with the Sample4 sample.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample4/Training05.ipynb_</ins> file for details.
+6. **Training6:** Sixth model training process. 
+In this notebook file, pre-trained MobileNetV2 model were trained based on Transfer Learning method with the Sample4 sample.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample4/Training06.ipynb_</ins> file for details.
+7. **Training7:** Seventh model training process. 
+In this notebook file, Data Augmentation operation were applied on Sample4 sample, pre-trained VGG16 model were trained based on Transfer Learning method with this augmented data.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample4/Training07.ipynb_</ins> file for details.
+8. **Training8:** Eighth model training process. 
+In this notebook file, Data Augmentation operation were applied on Sample4 sample, pre-trained MobileNetV2 model were trained based on Transfer Learning method with this augmented data.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample4/Training08.ipynb_</ins> file for details.
+9. **Training9:** Fifth model training process. 
+In this notebook file, pre-trained VGG16 model were trained based on Transfer Learning and Fine-Tuning methods with the Sample4 sample.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample4/Training09.ipynb_</ins> file for details.
+10. **Training10:** Sixth model training process. 
+In this notebook file, pre-trained MobileNetV2 model were trained based on Transfer Learning and Fine-Tuning methods with the Sample4 sample.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample4/Training10.ipynb_</ins> file for details.
+11. **Training11:** Seventh model training process. 
+In this notebook file, Data Augmentation operation were applied on Sample4 sample, pre-trained VGG16 model were trained based on Transfer Learning and Fine-Tuning methods with this augmented data.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample4/Training11.ipynb_</ins> file for details.
+12. **Training12:** Eighth model training process. 
+In this notebook file, Data Augmentation operation were applied on Sample4 sample, pre-trained MobileNetV2 model were trained based on Transfer Learning and Fine-Tuning methods with this augmented data.
+Accuracy and Loss charts were drawn for the Training and Validation data, and the results obtained by evaluating the trained model with the Test data were printed.
+Based on the Test data, prediction distribution charts were drawn for each label.
+See <ins>_/Training/Sample4/Training12.ipynb_</ins> file for details.
 
 ---
 
